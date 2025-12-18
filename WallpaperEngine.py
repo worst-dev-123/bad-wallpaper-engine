@@ -64,8 +64,6 @@ def SetLiveWallpaper(video_path):
             for frame in frames:
                 SetWallpaper(str(frame))
                 time.sleep(1 / fps)
-    except KeyboardInterrupt:
-        print("Stopped live wallpaper.")
 
 def detect_desktop():
     session = os.getenv("XDG_SESSION_DESKTOP", "").lower()
