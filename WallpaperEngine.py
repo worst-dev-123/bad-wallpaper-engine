@@ -59,11 +59,10 @@ def SetLiveWallpaper(video_path):
 
     print(f"Starting live wallpaper at ~{fps:.2f} FPS with {len(frames)} frames...")
 
-    try:
-        while True:
-            for frame in frames:
-                SetWallpaper(str(frame))
-                time.sleep(1 / fps)
+    while True:
+        for frame in frames:
+            SetWallpaper(str(frame))
+            time.sleep(1 / fps)
 
 def detect_desktop():
     session = os.getenv("XDG_SESSION_DESKTOP", "").lower()
